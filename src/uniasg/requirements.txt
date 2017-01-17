@@ -1,0 +1,6 @@
+plugnplay
+
+networkx
+python-vkontakte==1.1.2
+Pythonect==0.6.0
+requests
