@@ -26,9 +26,10 @@ class Container:
         self.scope = obj.get('scope', {})
         self.views = obj.get('views', {})
 
-class Action:
+class Action(object):
     def __init__(self, name, do=None):
         self.name = name
+        #do = kwargs.get('do',None)
         if do:
             self.do = types.MethodType(do,self)
 

@@ -6,8 +6,9 @@ Mode = IMode
 Plugins = frozendict({
     'VK': {
         'app_id': 'appid',
-        'user_login': 'pkeeper.shark@mail.ru',
+        'user_login': 'email',
         'user_password': 'pass',
         'access_token': 'k;lk;sf;ldkooooooomgooomg',
+        'owner_id': "-[group_id_int]"
 
     } })

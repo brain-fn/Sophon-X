@@ -27,8 +27,15 @@ class PluginVKInterface(plugnplay.Plugin):
         class ExperimentalWallPost(classes['core.Action']):
             ''' Just asks for a text and posts it to
                 current wall or the one in the config'''
+            def __init__(self, **kwargs):
+                super(ExperimentalWallPost,self).__init__('ExperimentalWallPost')
+                self.api = kwargs['api']
+                self.wall_id = kwargs['wall_id']
+
             def do(self):
-                pass
+                msg = raw_input('Input Message:\n')
+                self.api.wall.post(owner_id=self.wall_id,
+                                   message=msg)
 
         class VKInterface(classes['core.Interface']):
             def __init__(self, config, wall=None):
@@ -43,7 +50,8 @@ class PluginVKInterface(plugnplay.Plugin):
                 self._vkapi = API(session=session)
                 self.actions = {
                     'ooops'   : OopsAction,
-                    'wallpost': ExperimentalWallPost
+                    'wallpost': ExperimentalWallPost(api=self._vkapi,
+                                                     wall_id=config['owner_id'])
                 }
         return VKInterface(config)
 
