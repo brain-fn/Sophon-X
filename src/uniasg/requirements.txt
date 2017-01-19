@@ -1,6 +1,11 @@
 plugnplay
+frozendict==1.2
 
-networkx
-python-vkontakte==1.1.2
-Pythonect==0.6.0
+# Plugins dependencies
+#python-vkontakte==1.1.2
+vk<3
+
+# HZ Yet
 requests
+networkx
+Pythonect==0.6.0

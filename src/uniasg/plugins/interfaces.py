@@ -7,5 +7,5 @@ class ExternalInterface(Interface):
     like interface to Facebook
     register_func is callable with :FIXME parameters
   '''
-  def register(self, register_func):
+  def register(self, state):
     pass

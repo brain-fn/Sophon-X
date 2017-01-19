@@ -65,9 +65,13 @@ class Interface(object):
 class View(object):
     ''' Information for building view to make beter handle of containers data scope '''
 
-    def __init__(self, obj={}):
-        self.name = obj.get('name', 'n/a')
-        self._obj = obj.get('object', None)
+    def __init__(self,
+                 name='n/a',
+                 descr='No Description',
+                 obj=None):
+        self.name = name
+        self.descr = descr
+        self._obj = obj
 
 
 class ConsoleView (View):
@@ -98,8 +102,8 @@ class ConsoleView (View):
                 print "Wrong Action!"
             self._summed_actions[action].do()
 
-    def __init__(self,obj={}):
-        super(ConsoleView,self).__init__(obj)
+    def __init__(self, *args, **kwargs):
+        super(ConsoleView,self).__init__(*args, **kwargs)
 
 
         def _action_exit_do():

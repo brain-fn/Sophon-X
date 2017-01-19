@@ -1,0 +1,13 @@
+from frozendict import frozendict
+from constants import IMode
+
+Mode = IMode
+
+Plugins = frozendict({
+    'VK': {
+        'app_id': 'appid',
+        'user_login': 'pkeeper.shark@mail.ru',
+        'user_password': 'pass',
+        'access_token': 'k;lk;sf;ldkooooooomgooomg',
+
+    } })
