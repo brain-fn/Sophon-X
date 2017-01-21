@@ -1,2 +1,3 @@
-# uniasg-python
-Uniform Abstract Syntax Graph experiment. Python ver
+# Sophon|X
+Semantic Abstractions based computing engine experimental development.
+
